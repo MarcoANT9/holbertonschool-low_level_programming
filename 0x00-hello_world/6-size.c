@@ -26,7 +26,7 @@ int main(void)
 
 	printf("Size of a char: %i byte(s)\n", (int) sizeof(cht));
 
-	printf("Size of an int: %i byre(s)\n", (int) sizeof(itg));
+	printf("Size of an int: %i byte(s)\n", (int) sizeof(itg));
 
 	printf("Size of a long int: %i byte(s)\n", (int) sizeof(litg));
 
