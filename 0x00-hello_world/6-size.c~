@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+/**
+ * main - Prints all type sizes
+ *
+ * Description - This program will print the size of various types on this
+ * computer.
+ *
+ *
+ * Return: Always 0 (Success)
+ *
+ *
+ *
+ */
+
+
+int main(void)
+{
+
+	char characcter;
+	int integrer;
+	int longerint;
+	int lingestint;
+	float floater;
+
+
+	printf("Size of a char: %d byte(s)\n", sizeof(characcter));
+	printf("Size of an int: %d byre(s)\n", sizeof(integrer));
+	printf("Size of a long int: %d byte(s)\n", sizeof(longerint));
+	printf("Size of a long long int: %d byte(s)\n", sizeof(longestint));
+	printf("Size of a float: %d byte(s)\n", sizeof(floater));
+
+
+	return (0);
+
+}
