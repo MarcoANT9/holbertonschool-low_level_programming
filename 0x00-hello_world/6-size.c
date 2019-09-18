@@ -24,15 +24,15 @@ int main(void)
 	float flt;
 
 
-	printf("Size of a char: %ld byte(s)\n", sizeof(cht));
+	printf("Size of a char: %i byte(s)\n", (int) sizeof(cht));
 
-	printf("Size of an int: %ld byre(s)\n", sizeof(itg));
+	printf("Size of an int: %i byre(s)\n", (int) sizeof(itg));
 
-	printf("Size of a long int: %ld byte(s)\n", sizeof(litg));
+	printf("Size of a long int: %i byte(s)\n", (int) sizeof(litg));
 
-	printf("Size of a long long int: %ld byte(s)\n", sizeof(llitg));
+	printf("Size of a long long int: %i byte(s)\n", (int) sizeof(llitg));
 
-	printf("Size of a float: %ld byte(s)\n", sizeof(flt));
+	printf("Size of a float: %i byte(s)\n", (int) sizeof(flt));
 
 
 	return (0);
