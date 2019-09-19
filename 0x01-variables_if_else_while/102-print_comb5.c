@@ -14,40 +14,33 @@ int main(void)
 {
 	int i;
 	int j;
-	int k;
-	int l;
 
-	i = 48;
-	while (i < 58)
+	i=0;
+
+	for (i = 0; i <= 99; i++)
 	{
-		j = 48;
-		while (j < 57)
+
+		for (j = 0; j <= 99; j++)
 		{
-			k = i;
-			while (k < 58)
+
+			if (i < j)
 			{
-				l = j + 1;
-				while (l < 58)
+
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(32);
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+
+				if (i != 98 || j != 99)
 				{
-					putchar(i);
-					putchar(j);
+					putchar(44);
 					putchar(32);
-					putchar(k);
-					putchar(l);
-					if (i != 57 || j != 56 || k != 57 || l
-!= 57)
-					{
-						putchar(44);
-						putchar(32);
-					}
-					l += 1;
 				}
-				k += 1;
 			}
-			j += 1;
 		}
-		i += 1;
 	}
+
 	putchar('\n');
 	return (0);
 }
