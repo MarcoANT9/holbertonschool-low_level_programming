@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Print Combination V.2
+ * main - Print Combination V.3
  *
- * Description - Prints all combinations of double-digit numbers.
+ * Description - Print all combinations of double-digit numbers w/o repetition.
  *
  * Return: Always Success (0)
  *
@@ -21,7 +21,7 @@ int main(void)
 	while (i < 58)
 	{
 
-		j = 48;
+		j = i + 1;
 
 		while (j < 58)
 		{
@@ -29,7 +29,7 @@ int main(void)
 			putchar(i);
 			putchar(j);
 
-			if (i != 57 && j != 57)
+			if (i != 56 || j != 57)
 			{
 				putchar(44);
 				putchar(32);
