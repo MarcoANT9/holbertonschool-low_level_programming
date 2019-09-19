@@ -12,12 +12,12 @@
 int main(void)
 {
 
-	char a[100] = "abcdefghijklmnopqrstuvwxyz";
+	char a[100] = "abcdfghijklmnoprstuvwxyz";
 
 	int i;
 
 
-	for (i = 0; i < 26; i++)
+	for (i = 0; i < 24; i++)
 	{
 
 		putchar(a[i]);
