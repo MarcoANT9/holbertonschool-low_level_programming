@@ -1,0 +1,1 @@
+This project is about C variables, and the if - else - while functions.
