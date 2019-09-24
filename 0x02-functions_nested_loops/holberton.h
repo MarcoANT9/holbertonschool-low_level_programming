@@ -1,19 +1,12 @@
-#ifndef holberton_h
-#define holberton_h
-
-/**
- * This is the holberton header
- *
- *
- *
- */
-
 int _putchar (char a);
 int _islower(int c);
-int _isaplha(int c);
-int times_table(void);
+int _isalpha(int c);
+void times_table(void);
 int add(int, int);
 int print_to_98(int n);
-
-
-#endif
+void print_alphabet(void);
+void print_alphabet_x10(void);
+int print_sign(int n);
+int _abs(int);
+int print_last_digit(int);
+void jack_bauer();

@@ -2,7 +2,7 @@
 
 /**
  * main - Prints "Holberton"
- *
+ * @c: is the character input
  * descripton - see "main"
  *
  * Return: Always 0 (success)
