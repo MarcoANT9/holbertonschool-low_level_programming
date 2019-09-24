@@ -15,17 +15,19 @@
 int print_last_digit(int c)
 {
 
-	if (c < 0)
+	int j;
+
+	j = c % 10;
+
+	if (j <= 0)
 	{
-		c = c * -1;
+		j = j * -1;
 
 	}
 
-	c = c % 10;
+    	_putchar (j + '0');
 
-	_putchar (c + '0');
-
-	return (c);
+	return (j);
 
 
 }
