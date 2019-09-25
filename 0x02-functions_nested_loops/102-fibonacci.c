@@ -16,7 +16,7 @@ int main(void)
 
 	printf("%lu, %lu, ", f1, f2);
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		sum = f1 + f2;
 		f1 = f2;
@@ -24,7 +24,7 @@ int main(void)
 
 		printf("%lu", sum);
 
-		if (i != 49)
+		if (i != 47)
 		{
 			putchar(',');
 			putchar(' ');
