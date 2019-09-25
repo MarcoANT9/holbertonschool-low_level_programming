@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "holberton.h"
+
 
 /**
  * main - writes the sum og the even-valued terms of the fibonacci sequence
@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	int i;
+
 	unsigned long int f1 = 1, f2 = 2, sumf, sump;
 
 	sumf = f1 + f2;
