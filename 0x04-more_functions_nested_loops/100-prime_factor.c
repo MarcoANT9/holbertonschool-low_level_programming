@@ -15,28 +15,33 @@ int main(void)
 
 	long int i;
 	long int num = 612852475143;
-	long int prime = 1;
+	long int high;
+	long int temp;
 
+	i = 2;
+	high = 0;
 
-	i = 1;
-
-	while (i < num)
+ 	while (num != 1)
 	{
 		if (num % i == 0)
 		{
-			prime = i;
-			printf("%ld ", prime);
+			num = num / i;
+			temp = i;
 
+			if (temp > high)
+			{
+				high = temp;
+			}
+
+			i = 2;
 		}
-		i += 1;
-	}
 
-	if (prime == 1)
-	{
-		prime = num;
+		else
+		{
+			i = i + 1;
+		}
 	}
-
-	printf("%ld\n", prime);
+	printf("%lu\n", high);
 
 
 	return (0);
