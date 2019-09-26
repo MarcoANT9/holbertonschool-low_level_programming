@@ -28,4 +28,6 @@ void print_square(int); /** Draws a square on the terminal */
 
 void print_triangle(int); /** Prints a triangle on the terminal */
 
-int _putchar (char a); /** Custom putchar function */
+int _putchar (char); /** Custom putchar function */
+
+void print_number(int); /** Prints an integer number */
