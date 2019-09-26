@@ -1,11 +1,10 @@
 #include "holberton.h"
-#include <math.h>
+#include <stdio.h>
 
 /**
  * print_number - Prints an integer number
  *
  * @n: Number to be printed
- *
  *
  * Return: Nothing (void)
  *
@@ -13,43 +12,44 @@
 
 void print_number(int n)
 {
-	int i = 0, ch, j, tmp, base = 1, base2, m = n;
+	int i = 0, base = 1, j, ch, tmp = 1, m;
 
-	if (n < 0)
-	{
-		n = n * -1;
-	}
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-	while ((n % base)  != n)
+	m = n / 10;
+	while ((m % base) != m)
 	{
 		i = i + 1;
-		base *= 10;
-		tmp = (n % base);
+		base = base * 10;
 	}
-	base2 = base / 10;
-	tmp = 1;
-
 	for (j = 0; j < i; j++)
 	{
 		if (tmp == 1)
 		{
 			if (m < 0)
 			{
-				_putchar('-');
+				_putchar ('-');
+				ch = (n / base) * -1;
 			}
-			ch = (n / base2);
+			else
+			{
+				ch = (n / base);
+			}
 			_putchar(ch + '0');
-			base2 = base2 / 10;
+			base = base / 10;
 			tmp = 0;
+		}
+		if (m < 0)
+		{
+			ch = ((n / base) % 10) * -1;
 		}
 		else
 		{
-			ch = (n / base2) % 10;
-			_putchar(ch + '0');
-			base2 = base2 / 10;
+			ch = ((n / base) % 10);
 		}
+		base = base / 10;
+		_putchar(ch + '0');
 	}
 }
