@@ -15,8 +15,6 @@ void print_number(int n)
 {
 	int i = 0, ch, j, tmp, base = 1, base2, m = n;
 
-	m = m + 1;
-
 	if (n < 0)
 	{
 		n = n * -1;
@@ -54,5 +52,4 @@ void print_number(int n)
 			base2 = base2 / 10;
 		}
 	}
-
 }
