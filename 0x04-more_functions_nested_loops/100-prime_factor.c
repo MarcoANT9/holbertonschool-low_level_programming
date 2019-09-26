@@ -21,7 +21,7 @@ int main(void)
 	i = 2;
 	high = 0;
 
- 	while (num != 1)
+	while (num != 1)
 	{
 		if (num % i == 0)
 		{
