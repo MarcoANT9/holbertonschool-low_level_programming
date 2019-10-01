@@ -23,7 +23,7 @@ void puts_half(char *s)
 
 	if (i % 2 != 0)
 	{
-		i = i - 1;
+		i = i + 1;
 	}
 
 	i = i / 2;
