@@ -15,19 +15,21 @@ void print_rev(char *s)
 {
 	int i = 0;
 	char a = *s;
+	int j;
 
-	while (a != '\0')
+	while (!(a == '\0'))
 	{
 		i = i + 1;
 		a = *(s + i);
 	}
 
-	while (i >= 0)
+	for (j = i ; j >= 5; j--)
 	{
-		_putchar(a);
-		i = i - 1;
-		a = *(s + i);
+		if (a != '\0')
+		{
+			_putchar(a);
+		}
+		a = *(s + j);
 	}
-
 	_putchar('\n');
 }
