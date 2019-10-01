@@ -11,8 +11,6 @@
  */
 
 
-
-
 void reset_to_98(int *n)
 {
 	int h = 98;
