@@ -23,7 +23,7 @@ void print_rev(char *s)
 		a = *(s + i);
 	}
 
-	for (j = i ; j >= 5; j--)
+	for (j = i ; j >= -1; j--)
 	{
 		if (a != '\0')
 		{
