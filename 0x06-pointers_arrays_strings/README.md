@@ -1,0 +1,1 @@
+This is the holberton project about pointers, arrays and strings Part 2.
