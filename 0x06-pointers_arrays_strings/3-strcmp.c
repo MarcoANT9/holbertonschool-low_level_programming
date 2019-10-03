@@ -14,26 +14,26 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
-	char a = *(s1 + i);
 	int j = 0;
-	char b = *(s2 + j);
-	int dif;
+	int a = *(s1 + i);
+	int b = *(s2 + j);
+	int c;
 
-	while (a != '\0' || b != '\0')
+	while (a != '\0' && b != '\0')
 	{
-		if (a != '\0')
+		c = a - b;
+
+		if (c != 0)
 		{
-			i = i + 1;
+			return (c);
 		}
-		if (b != '\0')
-		{
-			j = j + 1;
-		}
+
+		i = i + 1;
+		j = j + 1;
 		a = *(s1 + i);
 		b = *(s2 + j);
 	}
 
-	dif = i - j;
+	return (0);
 
-	return (dif);
 }
