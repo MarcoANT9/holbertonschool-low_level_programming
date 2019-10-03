@@ -17,6 +17,11 @@ char *cap_string(char *s)
 	int i = 0;
 	int a = *(s + i);
 
+	if (a >= 97 && a <= 122)
+	{
+		*(s + i) = *(s + i) - 32;
+	}
+
 	while (a != '\0')
 	{
 		j = 0;
