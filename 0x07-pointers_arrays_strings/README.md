@@ -1,0 +1,1 @@
+This is a continuation of the projects about Pointers, Arrays and Strings at holberton school.
