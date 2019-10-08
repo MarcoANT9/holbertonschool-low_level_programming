@@ -18,11 +18,6 @@ unsigned int _strspn(char *s, char *accept)
 	int j;
 	unsigned int n;
 
-	while (*(accept + k) != '\0')
-	{
-		k = k + 1;
-	}
-
 	while (*(s + i) != '\0')
 	{
 		j = 0;
