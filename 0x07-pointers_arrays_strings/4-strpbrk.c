@@ -12,30 +12,30 @@
  *
  */
 
+
 char *_strpbrk(char *s, char *accept)
 {
 	int i = 0;
 	int j;
+	char *ip = '\0';
 
-	while (*(s + i) != '\0')
+	while (s[i])
 	{
 		j = 0;
-
-		while (*(accept + j) != '\0')
+		while (accept[j])
 		{
-
-			if (*(s + i) == (*(accept + j)))
+			if (s[i] == accept[j])
 			{
-				return (s + i);
+				ip = &s[i];
+				break;
 			}
-
 			j++;
 		}
-
+		if (ip != '\0')
+		{
+			break;
+		}
 		i++;
-
 	}
-
-	return (s + i);
-
+	return (ip);
 }
