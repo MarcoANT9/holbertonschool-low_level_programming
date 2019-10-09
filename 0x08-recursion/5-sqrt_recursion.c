@@ -22,7 +22,7 @@ int sqrt_recursive(int n, int i)
 		return (i);
 	}
 	return (-1);
-	
+
 }
 
 /**
