@@ -21,3 +21,5 @@ void print_array(int *a, int n); /** Prints an array */
 char *_strcpy(char *dest, char *src); /** Copies the string pointed to src */
 
 int _putchar(char);
+
+int _atoi(char *s); /** Convert a string into Integer */
