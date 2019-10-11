@@ -39,16 +39,13 @@ int str_len(char *s)
 
 int palindrominator(char *s, int i, int j)
 {
-	if (i > j)
+	if (*(s + j) == *(s + i))
 	{
-		if (*(s + j) == *(s + i))
-		{
-			palindrominator(s, i - 1, j + 1);
-		}
-		else
-		{
-			return (0);
-		}
+		palindrominator(s, i - 1, j + 1);
+	}
+	else
+	{
+		return (0);
 	}
 	return (1);
 }
