@@ -36,14 +36,14 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 
-			if (*argv[i] <= 'z' && *argv[i] >= 'a')
+			if (*argv[i] >= 48 && *argv[i] <= 57)
 			{
-				printf("Error\n");
-				return (1);
+				sum = sum + atoi(argv[i]);
 			}
 			else
 			{
-				sum = sum + atoi(argv[i]);
+				printf("Error\n");
+				return (1);
 			}
 		}
 		printf("%d\n", sum);
