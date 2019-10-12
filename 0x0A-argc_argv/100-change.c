@@ -56,23 +56,29 @@ int main(int argc, char *argv[])
 	int j, sum = 0;
 	int rem = atoi(argv[1]);
 
-	if (argc == 2)
+	if (rem < 0)
 	{
-		while (rem != 0)
-
-		{
-			j = _mindiv(rem);
-			sum = sum + rem / money[j];
-			rem = rem % money[j];
-		}
-		printf("%d\n", sum);
+		printf("0\n");
 
 	}
+
 	else
 	{
-		printf("Error\n");
-		return (1);
+		if (argc == 2)
+		{
+			while (rem != 0)
+			{
+				j = _mindiv(rem);
+				sum = sum + rem / money[j];
+				rem = rem % money[j];
+			}
+			printf("%d\n", sum);
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
-
 	return (0);
 }
