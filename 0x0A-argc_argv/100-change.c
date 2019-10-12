@@ -56,8 +56,6 @@ int main(int argc, char *argv[])
 	int j, sum = 0;
 	int rem = atoi(argv[1]);
 
-	printf("%d\n", argc);
-
 	if (argc == 2)
 	{
 		while (rem != 0)
