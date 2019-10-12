@@ -54,18 +54,17 @@ int main(int argc, char *argv[])
 {
 	int money[5] = {25, 10, 5, 2, 1};
 	int j, sum = 0;
-	int rem = atoi(argv[1]);
+	int rem;
 
-	if (rem < 0)
+	if (argc == 2)
 	{
-		printf("0\n");
-
-	}
-
-	else
-	{
-		if (argc == 2)
+		if (atoi(argv[1]) < 0)
 		{
+			printf("0\n");
+		}
+		else
+		{
+			rem = atoi(argv[1]);
 			while (rem != 0)
 			{
 				j = _mindiv(rem);
@@ -74,11 +73,12 @@ int main(int argc, char *argv[])
 			}
 			printf("%d\n", sum);
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
 	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
+
 	return (0);
 }
