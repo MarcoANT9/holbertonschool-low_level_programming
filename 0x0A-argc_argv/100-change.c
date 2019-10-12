@@ -3,17 +3,18 @@
 #include <stdlib.h>
 
 /**
- * main - Prints the sum of a group of numbers.
+ * main - Prints the minumul ammount of coins to make change for an amount of.
+ *        money
  *
  * @argc: Count of arguments the function takes.
  * @argv: Array of pointers to the string of the arguments.
  *
  *
- * Description - This program takes the numbers writen in the standard input
- *               and sums them into a simple result; if no numbers are input
- *               it will print "0" and return success. If there are characters
- *               that are no numbers in the input, the program prints "Error"
- *               and returns failure.
+ * Description - 
+ *
+ *
+ *
+ *
  *
  * Return: → 0 if successfull.
  *         → 1 if failure.
@@ -22,11 +23,11 @@
 int main(int argc, char *argv[])
 {
 
-	int sum, i;
-
-	if (argc == 1)
+      
+	if (argc != 2)
 	{
-		printf("0\n");
+		printf("Error\n");
+		return (1);
 	}
 
 	else
@@ -47,6 +48,7 @@ int main(int argc, char *argv[])
 			}
 		}
 		printf("%d\n", sum);
+		return (0);
 	}
 
 	return (0);
