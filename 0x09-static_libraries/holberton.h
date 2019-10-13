@@ -22,7 +22,7 @@ void _puts(char *s);
 
 char *_strcpy(char *dest, char *src);
 
-int _atoi(char *s);
+int _atoi(void);
 
 char *_strcat(char *dest, char *src);
 
