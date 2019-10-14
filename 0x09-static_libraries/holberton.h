@@ -10,7 +10,7 @@ int _islower(int c);
 
 int _isalpha(int c);
 
-int _abs(int n);
+int _abs(int c);
 
 int _isupper(int c);
 
@@ -22,7 +22,7 @@ void _puts(char *s);
 
 char *_strcpy(char *dest, char *src);
 
-int _atoi(void);
+int _atoi(char *s);
 
 char *_strcat(char *dest, char *src);
 
