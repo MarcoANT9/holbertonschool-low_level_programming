@@ -19,21 +19,20 @@
 char *_strdup(char *str)
 {
 	int i = 0, j = 0;
-	char *cpy = malloc((sizeof(char) * i) + 1);
+	char *cpy;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-
 	else
 	{
-		while (str[i])
+		while (str[i] != '\0')
 		{
 			i++;
 		}
 		i++;
-
+		cpy = malloc((sizeof(char) * i) + 1);
 		if (cpy == NULL)
 		{
 			return (NULL);
@@ -44,7 +43,6 @@ char *_strdup(char *str)
 			*(cpy + j) = *(str + j);
 			j++;
 		}
-
 		return (cpy);
 	}
 }
