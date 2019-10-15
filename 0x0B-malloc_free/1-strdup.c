@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "holberton.h"
 #include <stdlib.h>
+#include <errno.h>
 
 /**
  * _strdup - Returns a pointer to a copy of a string.
@@ -18,9 +19,6 @@
 
 char *_strdup(char *str)
 {
-	int i = 0, j = 0;
-	char *cpy = malloc(sizeof(char) * i);
-
 	if (str == NULL)
 	{
 		return (NULL);
@@ -28,12 +26,16 @@ char *_strdup(char *str)
 
 	else
 	{
+		int i = 0, j = 0;
+
 		while (str[i])
 		{
 			i++;
 		}
+		i++;
+		char *cpy = malloc(sizeof(char) * i);
 
-		if (cpy == NULL)
+		if ((cpy == NULL) || (errno == 12))
 		{
 			return (NULL);
 		}
