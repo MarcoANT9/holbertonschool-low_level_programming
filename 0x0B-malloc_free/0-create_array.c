@@ -30,6 +30,12 @@ char *create_array(unsigned int size, char c)
 	else
 	{
 		hlist = malloc(sizeof(char) * size);
+
+		if (hlist == NULL)
+		{
+			return (NULL);
+		}
+
 		for (i = 0; i < size; i++)
 		{
 			*(hlist + i) = c;
