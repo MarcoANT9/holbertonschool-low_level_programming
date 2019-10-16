@@ -19,7 +19,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **grido;
-	int i, j;
+	int i, j, k = 0;
 
 	if (width < 1 || height < 1)
 	{
@@ -34,28 +34,24 @@ int **alloc_grid(int width, int height)
 
 	while (i < height)
 	{
-		grido[i] = malloc(sizeof(int) * height);
+		grido[i] = malloc(sizeof(int) * width);
 		if (grido[i] == NULL)
 		{
-			while (i >= 0)
+			for (i = i - 1; i >= 0; i--)
 			{
 				free(grido[i]);
-				i--;
 			}
+			free(grido);
 			return (NULL);
 		}
 		i++;
 	}
-	i = 0;
-	while (i < height)
+
+	for (i = 0; j < height; j++)
 	{
-		j = 0;
-		while (j < width)
-		{
-			grido[i][j] = 0;
-			j++;
-		}
-		i++;
+		grido[i][j] = 0;
 	}
+
 	return (grido);
+
 }
