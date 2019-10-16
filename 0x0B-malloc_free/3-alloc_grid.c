@@ -19,7 +19,7 @@
 int **alloc_grid(int width, int height)
 {
 	int **grido;
-	int i, j, k = 0;
+	int i, j;
 
 	if (width < 1 || height < 1)
 	{
