@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * strring_nconcat - Concatenates two strings.
+ * string_nconcat - Concatenates two strings.
  *
  * @s1: First string to concatenate.
  * @s2: Second string to concatenate.
- * @n: Number of bytes to concatenate.
+ * @n: Bytes to copy from s2.
  *
  * Description - This program will take two strings and concatenate eachother
  *               starting from s1 and allocating s2 after it. If either of
@@ -23,24 +23,21 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *s1s2;
 	unsigned int k = 0, ij;
 
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	while (s1[i] != '\0' || s2[j] != '\0')
-	{
-		if (s1[i] != '\0')
-			i++;
-		if (s2[j] != '\0')
-			j++;
-	}
-	if (j < n)
+	for (i = 0; s1[i] != '\0'; i++)
+	{}
+	for (j = 0; s2[j] != '\0'; j++)
+	{}
+	if (j > n)
 	{
 		j = n;
 	}
-	ij = (i + j);
-	s1s2 = malloc(sizeof(char) * (ij + 1));
+	ij = i + j;
+	s1s2 = malloc((ij + 1)  * sizeof(char));
 	if (s1s2 == NULL)
 	{
 		return (NULL);
@@ -51,11 +48,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 	}
 	i = 0;
-	while (k <= ij)
+	while (k < ij)
 	{
 		*(s1s2 + k) = s2[i];
 		k++;
 		i++;
 	}
+	s1s2[k] = '\0';
 	return (s1s2);
 }

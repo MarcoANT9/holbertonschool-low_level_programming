@@ -11,11 +11,11 @@ int main(void)
 {
 	char *concat;
 
-	concat = string_nconcat("Holberton ", "School !!!", 6);
+	concat = string_nconcat("Car ", "heyo", 3);
 	printf("%s\n", concat);
 	free(concat);
 
-	concat = string_nconcat(NULL, "School !!!", 8);
+	concat = string_nconcat(NULL, "School.!!!", 8);
 	printf("%s\n", concat);
 	free(concat);
 
@@ -23,7 +23,7 @@ int main(void)
 	printf("%s\n", concat);
 	free(concat);
 
-	concat = string_nconcat("Hello ", "There", 5);
+	concat = string_nconcat("Hello.", "There", 2);
 	printf("%s\n", concat);
 	free(concat);
 
