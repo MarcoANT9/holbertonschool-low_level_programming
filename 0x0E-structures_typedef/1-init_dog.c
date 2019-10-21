@@ -20,12 +20,9 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int i = 0;
+	if (d == NULL)
+		return;
 
-	while (*(name + i) != '\0')
-		i++;
-
-	d->name = malloc(sizeof(char) * i);
 	d->name = name;
 	d->age = age;
 	d->owner = owner;
