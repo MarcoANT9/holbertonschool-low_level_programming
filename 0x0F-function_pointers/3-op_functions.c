@@ -1,4 +1,4 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * op_add - Adds two numbers.
@@ -8,6 +8,7 @@
  *
  * Return: Addition of a to b.
  */
+
 int op_add(int a, int b)
 {
 	return (a + b);
@@ -21,10 +22,12 @@ int op_add(int a, int b)
  *
  * Return: Difference between a and b.
  */
+
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
  * op_mul - Multiplies two numbers.
  *
@@ -33,10 +36,12 @@ int op_sub(int a, int b)
  *
  * Return: Product of a and b.
  */
+
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
  * op_div - Divides a by b to get quotient.
  *
@@ -45,10 +50,17 @@ int op_mul(int a, int b)
  *
  * Return: Quotient between a and b.
  */
+
 int op_div(int a, int b)
 {
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	return (a / b);
 }
+
 /**
  * op_mod - Divides a by b to get remainder.
  *
@@ -57,7 +69,13 @@ int op_div(int a, int b)
  *
  * Return: Remainder between a and b.
  */
+
 int op_mod(int a, int b)
 {
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	return (a % b);
 }
