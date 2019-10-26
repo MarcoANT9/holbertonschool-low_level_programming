@@ -5,6 +5,27 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * format_type - Structure for types.
+ *
+ * @_format: Input format.
+ * @f: Function associated.
+ *
+ */
+
+typedef struct format_type{
+
+	char _format;
+	void (*f)(va_list);
+
+}f_t;
+
+/** 3. Print all Functions */
+void prt_char(va_list);
+void prt_int(va_list);
+void prt_float(va_list);
+void prt_string(va_list);
+
 
 /** Good ol' putchar */
 int _putchar(char *s);

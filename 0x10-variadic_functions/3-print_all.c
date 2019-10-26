@@ -16,39 +16,39 @@ void prt_char(va_list c)
 /**
  * prt_int - Prints an int.
  *
- * @i: Int to print.
+ * @c: Int to print.
  *
  * Return: Nothing (void).
  */
-void prt_int(va_list i)
+void prt_int(va_list c)
 {
 
-	printf("%i", va_arg(i, int));
+	printf("%i", va_arg(c, int));
 }
 
 /**
  * prt_float - Print a float.
  *
- * @f: Float to print.
+ * @c: Float to print.
  *
  * Return: Nothing (void).
  */
-void prt_float(va_list f)
+void prt_float(va_list c)
 {
 
-	printf("%f", va_arg(f, double));
+	printf("%f", va_arg(c, double));
 }
 
 /**
  * prt_string - Prints a string.
  *
- * @s: String to print.
+ * @c: String to print.
  *
  * Return: Nothing (void).
  */
-void prt_string(va_list s)
+void prt_string(va_list c)
 {
-	char *p = va_arg(s, char *);
+	char *p = va_arg(c, char *);
 
 	if (p != NULL)
 		printf("%s", p);
