@@ -1,5 +1,5 @@
 #include "variadic_functions.h"
-#include <string.h>
+
 
 /**
  * prt_char - Prints a char.
@@ -74,7 +74,7 @@ void prt_string(va_list c)
 
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+
 	int j = 0;
 	int n = 0;
 	va_list print_list;
@@ -86,10 +86,10 @@ void print_all(const char * const format, ...)
 		{'s', prt_string},
 	};
 
-	i = strlen(format);
+
 	va_start(print_list, format);
 
-	while (j < i)
+	while (format[j] != '\0')
 	{
 		n = 0;
 		while (n < 4)
@@ -98,7 +98,7 @@ void print_all(const char * const format, ...)
 			{
 				formats[n].f(print_list);
 
-				if (!((j + 1) == i))
+				if (format[j + 1] != '\0')
 					printf(", ");
 			}
 			n++;
