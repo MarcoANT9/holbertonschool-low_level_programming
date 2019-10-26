@@ -84,6 +84,7 @@ void print_all(const char * const format, ...)
 		{'i', prt_int},
 		{'f', prt_float},
 		{'s', prt_string},
+		{'\0', NULL}
 	};
 
 
