@@ -1,12 +1,12 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - Prints a series of numbers.
+ * print_strings - Prints a series of strings.
  *
  * @separator: String to separate the numbers.
- * @n: Number of numbers to print.
+ * @n: Number of strings to print.
  *
- * Description - This program takes an arbitrary number of int arguments and
+ * Description - This program takes an arbitrary number of char* arguments and
  *               prints them using the separator specified in the argument.
  *
  * Return: Nothing (Void).
