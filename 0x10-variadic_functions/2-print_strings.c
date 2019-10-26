@@ -13,25 +13,31 @@
  *
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
-	int j = 0;
+	int j;
 	va_list char_list;
 
+	char *ip;
 
 	va_start(char_list, n);
 
 
 	while (i < n)
 	{
-
+		ip = va_arg(char_list, char *);
 		j = 0;
-		printf("%d", (va_arg(char_list, int)));
+
+		if (ip == NULL)
+			printf("(nil)");
+
+		else
+			printf("%s", ip);
 
 		if (!(separator == NULL))
 		{
-			if (!((i+ 1) == n))
+			if (!((i + 1) == n))
 			{
 				while (separator[j] != '\0')
 				{
@@ -40,10 +46,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 				}
 			}
 		}
-		else
-		{
-			printf(" ");
-		}
+
 		i++;
 	}
 	printf("\n");
