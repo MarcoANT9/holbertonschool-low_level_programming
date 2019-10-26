@@ -22,17 +22,15 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-        /** Start num_list for n arguments */
 	va_start(num_list, n);
 
-	/** Access all the arguments in num_list */
+
 	while (i < n)
 	{
 		sum = sum + va_arg(num_list, int);
 		i++;
 	}
 
-	/** Clean memory from num_list */
 	va_end(num_list);
 
 	return (sum);

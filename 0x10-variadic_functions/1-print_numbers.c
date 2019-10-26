@@ -31,7 +31,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		if (!(separator == NULL))
 		{
-			if (!((i+ 1) == n))
+			if (!((i + 1) == n))
 			{
 				while (separator[j] != '\0')
 				{
