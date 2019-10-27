@@ -13,12 +13,13 @@
  *
  */
 
-typedef struct format_type{
+typedef struct format_type
+{
 
 	char *_format;
 	void (*f)(va_list);
 
-}f_t;
+} f_t;
 
 /** 3. Print all Functions */
 void prt_char(va_list);
