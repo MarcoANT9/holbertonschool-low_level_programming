@@ -80,22 +80,22 @@ void print_all(const char * const format, ...)
 	char *sep = "";
 
 	f_t formats[] = {
-		{'c', prt_char},
-		{'i', prt_int},
-		{'f', prt_float},
-		{'s', prt_string},
-		{'\0', NULL}
+		{"c", prt_char},
+		{"i", prt_int},
+		{"f", prt_float},
+		{"s", prt_string},
+		{NULL, NULL}
 	};
 
 
 	va_start(print_list, format);
 
-	while (format[j] != '\0')
+	while (format != NULL && format[j] != '\0')
 	{
 		n = 0;
 		while (n < 4)
 		{
-			if (*(format + j) == formats[n]._format)
+			if ((format[j]) == *formats[n]._format)
 			{
 				printf("%s", sep);
 				formats[n].f(print_list);

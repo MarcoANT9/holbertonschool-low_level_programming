@@ -15,7 +15,7 @@
 
 typedef struct format_type{
 
-	char _format;
+	char *_format;
 	void (*f)(va_list);
 
 }f_t;
