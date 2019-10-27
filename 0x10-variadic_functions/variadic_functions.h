@@ -6,7 +6,7 @@
 #include <stdarg.h>
 
 /**
- * format_type - Structure for types.
+ * struct format_type - Structure for types.
  *
  * @_format: Input format.
  * @f: Function associated.
