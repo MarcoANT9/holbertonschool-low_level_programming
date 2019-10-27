@@ -1,6 +1,5 @@
 #include "variadic_functions.h"
 
-
 /**
  * prt_char - Prints a char.
  *
@@ -78,6 +77,7 @@ void print_all(const char * const format, ...)
 	int j = 0;
 	int n = 0;
 	va_list print_list;
+	char *sep = "";
 
 	f_t formats[] = {
 		{'c', prt_char},
@@ -97,10 +97,10 @@ void print_all(const char * const format, ...)
 		{
 			if (*(format + j) == formats[n]._format)
 			{
+				printf("%s", sep);
 				formats[n].f(print_list);
 
-				if (format[j + 1] != '\0')
-					printf(", ");
+				sep = ", ";
 			}
 			n++;
 		}
