@@ -50,10 +50,11 @@ void prt_string(va_list c)
 	char *p = va_arg(c, char *);
 
 	if (p != NULL)
+	{
 		printf("%s", p);
-
-	else
-		printf("(nil)");
+		return;
+	}
+	printf("(nil)");
 
 }
 
