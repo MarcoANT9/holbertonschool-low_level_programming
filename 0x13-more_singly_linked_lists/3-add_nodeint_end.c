@@ -3,7 +3,7 @@
 
 
 /**
- * add_nodeint - Adds a new element to the beginning of the list.
+ * add_nodeint_end - Adds a new element to the beginning of the list.
  *
  * @head: Beginning of the linked list.
  * @n: New element to add.
