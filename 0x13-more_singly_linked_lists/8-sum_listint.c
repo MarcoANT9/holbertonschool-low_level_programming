@@ -3,7 +3,7 @@
 
 
 /**
- * sum_listint
+ * sum_listint - Sums all the elements in a list.
  *
  * @head: The first element of the linked list.
  *

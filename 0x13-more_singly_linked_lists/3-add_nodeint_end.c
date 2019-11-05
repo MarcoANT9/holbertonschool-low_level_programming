@@ -23,7 +23,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	listint_t *previous = *head;
 
 	if (added_node == NULL)
-		return NULL;
+		return (NULL);
 
 
 	added_node->n = n; /** Asigns value of element */
