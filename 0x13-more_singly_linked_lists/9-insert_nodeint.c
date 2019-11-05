@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-
 
 /**
  * insert_nodeint_at_index - Adds a node at the desired index.
@@ -29,6 +27,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 
 	new_node->n = n;
+	if (idx == 0)
+	{
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
+	}
 	while (tmp->next != NULL && index2 != idx)
 	{
 		index2++;
