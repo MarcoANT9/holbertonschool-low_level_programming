@@ -42,10 +42,10 @@ unsigned int two_power(int powa)
 
 unsigned int binary_to_uint(const char *b)
 {
-	char *copy = b;
 	int index = 0;
 	int counter = 0;
 	unsigned int converter = 0;
+
 
 	if (b == NULL)
 	{
@@ -66,7 +66,7 @@ unsigned int binary_to_uint(const char *b)
 	counter--;
 	while (counter >= 0)
 	{
-		if (*(copy + counter) == '0')
+		if (*(b + counter) == '0')
 		{
 			counter--;
 			index++;
