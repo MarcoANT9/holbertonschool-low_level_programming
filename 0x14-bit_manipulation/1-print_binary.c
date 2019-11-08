@@ -16,37 +16,7 @@
 
 void print_binary(unsigned long int n)
 {
-	int counter = 0;
-	char f;
-
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
-	if (n == 1)
-	{
-		_putchar('1');
-		return;
-	}
-	while ((n >> counter) != 0)
-	{
-		counter++;
-	}
-	counter--;
-	while (counter >= 0)
-	{
-		f = ((n & (1 << counter)));
-
-		if (f)
-		{
-			_putchar('1');
-		}
-		else
-		{
-			_putchar('0');
-		}
-		counter--;
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
