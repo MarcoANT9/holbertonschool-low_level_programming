@@ -20,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int index = 0;
 	int n_mask, m_mask;
-	unsigned int counter = 0;
+	unsigned long int counter = 0;
 	unsigned int mask = 1;
 
 
