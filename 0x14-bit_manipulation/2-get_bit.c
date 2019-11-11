@@ -17,17 +17,13 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int counter = 0;
-
-
-	while ((n >> counter) != 0)
-	{
-		counter++;
-	}
-	counter--;
-
-	if (counter < index)
+	if (index > 32)
 		return (-1);
+
 	else
-		return ((n & (1 << index)) != 0);
+	{
+		unsigned int mask = 1 << index;
+		return ((n & mask) >> index);
+
+	}
 }
