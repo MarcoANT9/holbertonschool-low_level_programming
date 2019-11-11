@@ -32,7 +32,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		if (n_mask != m_mask)
 			counter++;
 
-		mask = mask << 1;
+		if (index != 32)
+			mask = mask << 1;
 		index++;
 
 	}
