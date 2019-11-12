@@ -40,16 +40,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (size < 0)
 	{
+		close(file);
 		free(buf);
 		return (0);
 	}
 
 	buf[size] = '\0';
 
-	wrt = write(1, buf, size);
+	wrt = write(STDOUT_FILENO, buf, size);
 
 	if (wrt < 0)
 	{
+		close(file);
 		free(buf);
 		return (0);
 	}
