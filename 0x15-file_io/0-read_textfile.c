@@ -20,40 +20,40 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file, wrt;
-	size_t size;
-	size_t counter = 0;
-	char *buf = malloc(sizeof(char) * (letters));
+	int size;
+
+	char *buf;
 
 	if (filename == NULL)
-	{
-		free(buf);
 		return (0);
-	}
 
 	file = open(filename, O_RDONLY, 0222);
 
 	if (file < 0)
+		return (0);
+
+	buf = malloc(sizeof(char) * (letters + 1));
+	if (buf == NULL)
+		return (0);
+
+	size = read(file, buf, letters);
+
+	if (size < 0)
 	{
 		free(buf);
 		return (0);
 	}
 
-	size = read(file, buf, letters);
-
 	buf[size] = '\0';
 
-	while (counter < letters)
+	wrt = write(1, buf, size);
+
+	if (wrt < 0)
 	{
-		wrt = write(1, buf, 1);
-		if (wrt < 0)
-		{
-			free(buf);
-			return (0);
-		}
-		buf++;
-		counter++;
+		free(buf);
+		return (0);
 	}
-
-	return (counter);
-
+	close(file);
+	free(buf);
+	return (wrt);
 }
