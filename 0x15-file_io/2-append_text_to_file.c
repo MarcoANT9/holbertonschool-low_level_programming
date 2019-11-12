@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * create_file - This program creates a text file.
+ * append_text_to_file - Appends text to the end of a file.
  *
  * @filename: Name of the file to create.
  * @text_content: Content of the file.
@@ -14,17 +14,17 @@
  *         → -1 on failure.
  */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int new_file, wrt, _strlen = 0;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 
 	while (*(text_content + _strlen) != '\0')
 		_strlen++;
 
-	new_file = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
+	new_file = open(filename, O_WRONLY | O_APPEND);
 
 	if (new_file < 0)
 		return (-1);
@@ -33,11 +33,13 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 
 	wrt = write(new_file, text_content, _strlen);
+
 	if (wrt < 0)
 	{
 		close(new_file);
 		return (-1);
 	}
+
 
 	close(new_file);
 	return (1);
