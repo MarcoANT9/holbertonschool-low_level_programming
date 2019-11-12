@@ -21,9 +21,6 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (0);
 
-	while (*(text_content + _strlen) != '\0')
-		_strlen++;
-
 	new_file = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 
 	if (new_file == -1)
@@ -31,6 +28,9 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content == NULL)
 		return (1);
+
+	while (*(text_content + _strlen) != '\0')
+		_strlen++;
 
 	wrt = write(new_file, text_content, _strlen);
 	if (wrt == -1)
