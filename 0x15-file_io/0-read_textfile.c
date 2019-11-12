@@ -12,9 +12,9 @@
  *               the number of letters readed by the program.
  *
  * Return: → Number of letters the program could read.
- *         → 0 if the filename is NULL or if write fails or does not write the
- *           spected ammount of bytes, or if the file cannont be opened or
- *           read.
+ *         → 0 if the filename is NULL or if write fails or does not write
+ *           the spected ammount of bytes, or if the file cannont be opened
+ *           or read.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -44,7 +44,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while (counter < letters)
 	{
-		wrt = write (1, buf, 1);
+		wrt = write(1, buf, 1);
 		if (wrt < 0)
 		{
 			free(buf);
