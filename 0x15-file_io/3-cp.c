@@ -16,6 +16,8 @@ void _close_FD(int file_1, int file_2)
 
 	if (close(file_2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_2);
+
+	exit(100);
 }
 
 /**
@@ -64,7 +66,7 @@ void _cant_write(char *s)
 int main(int argc, char **argv)
 {
 	int file_from, file_to, read_buf, wrt_buf;
-	char *buf;
+	char buf[1024];
 
 	if (argc != 3) /** Validates the number of arguments */
 	{
@@ -77,30 +79,20 @@ int main(int argc, char **argv)
 	file_to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664); /**-*/
 	if (file_to == -1) /** Validates file_to creation ↑ */
 		_cant_write(argv[2]);
-
-	buf = malloc(sizeof(char) * 1024); /** Creates Buffer */
-	if (buf == NULL) /** Validates buffer */
-	{
-		_close_FD(file_from, file_to);
-		return (-1);
-	}
 	for (read_buf = read(file_from, buf, 1024); read_buf > 0;
 	     read_buf = read(file_from, buf, 1024))
 	{
 		wrt_buf = write(file_to, buf, 1024); /** Tries to write */
 		if (wrt_buf == -1) /** Validates the writing */
 		{
-			free(buf);
 			_cant_write(argv[2]); /** Exit */
 		}
 	}
 	if (read_buf == -1)
 	{
 		_close_FD(file_from, file_to);
-		free(buf);
 		_cant_read(argv[1]);
 	}
 	_close_FD(file_from, file_to); /** Cloeses files */
-	free(buf); /** Frees buffer */
 	return (1);
 }
