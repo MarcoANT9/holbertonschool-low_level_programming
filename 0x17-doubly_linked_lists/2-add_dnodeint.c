@@ -3,8 +3,8 @@
 /**
  * add_dnodeint - Adds a node at the beginning of a list.
  *
- * @h: Header of the linked list.
- *
+ * @head: Header of the linked list.
+ * @n: Value of the new node.
  *
  * Description - This program takes the address of a doubly linked list
  *               and adds a new node at the beginning of the list.
