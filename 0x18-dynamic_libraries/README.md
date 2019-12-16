@@ -1,0 +1,1 @@
+This project will be about dinamic libraries
