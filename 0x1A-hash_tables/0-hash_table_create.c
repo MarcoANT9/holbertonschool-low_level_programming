@@ -36,7 +36,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 			free(head_table);
 			return (NULL);
 		}
-
 		head_table->array = &new_node;
 		new_node->key = NULL;
 		new_node->value = NULL;
@@ -46,7 +45,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	else
 		return (head_table);
 
-	for (index = 0; index < size; index++)
+/**	for (index = 0; index < size; index++)
 	{
 		next_node = malloc(sizeof(hash_node_t));
 		if (next_node == NULL)
@@ -57,5 +56,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 		next_node->next = NULL;
 		new_node = next_node;
 	}
-	return (head_table);
+*/	return (head_table);
 }
