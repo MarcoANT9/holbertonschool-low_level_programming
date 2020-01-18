@@ -27,7 +27,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (head_table == NULL)
 		return (NULL);
 	head_table->size = size;
-
 	if (size > 0)
 	{
 		new_node = malloc(sizeof(hash_node_t));
@@ -41,20 +40,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		new_node->value = NULL;
 		new_node->next = NULL;
 	}
+	return (head_table);
 
-	else
-		return (head_table);
-
-/**	for (index = 0; index < size; index++)
-	{
-		next_node = malloc(sizeof(hash_node_t));
-		if (next_node == NULL)
-			return (NULL);
-		new_node->next = next_node;
-		next_node->key = "";
-		next_node->value = "";
-		next_node->next = NULL;
-		new_node = next_node;
-	}
-*/	return (head_table);
 }
