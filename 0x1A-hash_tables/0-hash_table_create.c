@@ -41,12 +41,12 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		next_node = malloc(sizeof(hash_node_t));
 		if (next_node == NULL)
-			return NULL;
+			return (NULL);
 		new_node->next = next_node;
 		next_node->key = "";
 		next_node->value = "";
 		next_node->next = NULL;
 		new_node = next_node;
 	}
-	return head_table;
+	return (head_table);
 }
