@@ -27,16 +27,25 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (head_table == NULL)
 		return (NULL);
 	head_table->size = size;
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
+
+	if (size > 0)
 	{
-		free(head_table);
-		return (NULL);
+		new_node = malloc(sizeof(hash_node_t));
+		if (new_node == NULL)
+		{
+			free(head_table);
+			return (NULL);
+		}
+
+		head_table->array = &new_node;
+		new_node->key = NULL;
+		new_node->value = NULL;
+		new_node->next = NULL;
 	}
-	head_table->array = &new_node;
-	new_node->key = "";
-	new_node->value = "";
-	new_node->next = NULL;
+
+	else
+		return (head_table);
+
 	for (index = 0; index < size; index++)
 	{
 		next_node = malloc(sizeof(hash_node_t));
