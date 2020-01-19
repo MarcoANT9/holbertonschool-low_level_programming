@@ -18,7 +18,6 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int index;
 	hash_table_t *new_table;
 	hash_node_t *new_node;
 
@@ -36,12 +35,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	for (index = 0; index < size; index++)
-		new_table->array[index] = NULL;
-
 	new_table->size = size;
 	new_table->array = &new_node;
-
 	return (new_table);
 
 }
