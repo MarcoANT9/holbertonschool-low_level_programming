@@ -19,17 +19,33 @@ def island_perimeter(grid):
         rectangular matrix.                                                 """
     perimeter = 0
 
-    index = 1
+    index = 0
 
-    while (index < len(grid) - 1):
-        jndex = 1
-        while (jndex < len(grid[index]) - 1):
+    while (index < len(grid)):
+        jndex = 0
+        while (jndex < len(grid[index])):
             if (grid[index][jndex] == 1):
-                proximity_count = [grid[index][jndex - 1],
-                                   grid[index][jndex + 1],
-                                   grid[index - 1][jndex],
-                                   grid[index + 1][jndex]]  # →, ←, ↑, ↓
-                perimeter += 4 - sum(proximity_count)
+                if (index == 0):
+                    up = 0
+                else:
+                    up = grid[index-1][jndex]
+
+                if (index == len(grid)):
+                    down = 0
+                else:
+                    down = grid[index + 1][jndex]
+
+                if (jndex == 0):
+                    left = 0
+                else:
+                    left = grid[index][jndex - 1]
+
+                if (jndex == len(grid[index])):
+                    right = 0
+                else:
+                    right = grid[index][jndex + 1]
+
+                perimeter += 4 - (up + down + left + right)
 
             jndex += 1
 
