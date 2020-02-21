@@ -18,39 +18,32 @@ def island_perimeter(grid):
     """ Grid is the inserted atrix to calculate the perimeter, it's always a
         rectangular matrix.                                                 """
     perimeter = 0
-
     index = 0
 
     while (index < len(grid)):
         jndex = 0
+
         while (jndex < len(grid[index])):
             if (grid[index][jndex] == 1):
                 if (index == 0):
                     up = 0
                 else:
                     up = grid[index-1][jndex]
-
-                if (index == len(grid)):
+                if (index == len(grid) - 1):
                     down = 0
                 else:
                     down = grid[index + 1][jndex]
-
                 if (jndex == 0):
                     left = 0
                 else:
                     left = grid[index][jndex - 1]
-
-                if (jndex == len(grid[index])):
+                if (jndex == len(grid[index]) - 1):
                     right = 0
                 else:
                     right = grid[index][jndex + 1]
-
                 perimeter += 4 - (up + down + left + right)
-
             jndex += 1
-
         index += 1
-
     return perimeter
 
 if __name__ == "__main__":
