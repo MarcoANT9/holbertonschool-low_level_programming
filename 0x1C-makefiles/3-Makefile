@@ -7,7 +7,7 @@ RM = rm
 all: $(SRC) $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean: *~
+clean:
 	$(RM) -f *~ holberton
 
 oclean: $(OBJ)
