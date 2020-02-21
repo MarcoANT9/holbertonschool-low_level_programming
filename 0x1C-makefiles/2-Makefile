@@ -1,12 +1,7 @@
-all: compile
-
 CC = gcc
 SRC = main.c holberton.c
 OBJ = main.o holberton.o
 NAME = holberton
 
-objects: $(SRC)
-	$(CC) $(SRC)
-
-compile: $(OBJ)
+all: $(SRC) $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
