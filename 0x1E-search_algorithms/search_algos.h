@@ -80,10 +80,8 @@ skiplist_t *linear_skip(skiplist_t *list, int value);
 /**-SPECIAL NOTES & OTHERS-------------------------------------------------*/
 /**========================================================================*/
 
-/**
- * Task 2 → 6, 8, 14 and 15 are text files showing the Big O notations of
- * different searching methods, including the tasks in this project.
- */
+/** Task 2 → 6, 8, 14 and 15 are text files showing the Big O notations of
+/** different searching methods, including the tasks in this project.
 
 /**========================================================================*/
 /**-END--------------------------------------------------------------------*/
